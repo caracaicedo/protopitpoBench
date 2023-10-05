@@ -1,0 +1,282 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "API ProtopitpoBench",
+    "version": "1.0",
+    "description": "API rest para el cálculo de la posición de una nave"
+  },
+  "host": "caracaicedo.github.io",
+  "basePath": "/protopitpoBench",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/banco/consul": {
+      "get": {
+        "summary": "Consultar Cédula",
+        "tags": ["banco-controller"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/crearUsuario": {
+      "post": {
+        "summary": "Crear Usuario",
+        "tags": ["banco-controller"],
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "usuario",
+            "description": "Usuario",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Usuario"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/deleteCliente": {
+      "post": {
+        "summary": "Delete Cliente",
+        "tags": ["banco-controller"],
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "cliente",
+            "description": "Cliente",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/getCliente": {
+      "get": {
+        "summary": "Consultar Cliente",
+        "tags": ["banco-controller"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "cliente",
+            "description": "Cliente",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/getClienteCedula": {
+      "get": {
+        "summary": "Consultar Cédula",
+        "tags": ["banco-controller"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "cliente",
+            "description": "Cliente",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/getClienteExcel": {
+      "post": {
+        "summary": "Obtener Cliente en Excel",
+        "tags": ["banco-controller"],
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "201": {
+            "description": "Created"
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/getEmpleados": {
+      "get": {
+        "summary": "Obtener Empleados",
+        "tags": ["banco-controller"],
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/getUsuarios": {
+      "get": {
+        "summary": "Obtener Usuarios",
+        "tags": ["banco-controller"],
+        "produces": ["*/*"],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
+          "404": {
+            "description": "Not Found"
+          }
+        }
+      }
+    },
+    "/banco/updateCliente": {
+      "post": {
+        "summary": "Actualizar Cliente",
+        "tags": ["banco-controller"],
+        "consumes": ["application/json"],
+        "produces": ["*/*"],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "cliente",
+            "description": "Cliente",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Cliente"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+             
