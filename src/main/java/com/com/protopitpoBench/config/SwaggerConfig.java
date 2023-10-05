@@ -32,7 +32,7 @@ public class SwaggerConfig {
 	    return new ApiInfoBuilder()
 	            .title("Api rest Banco	")
 	            .description("api rest para el el calcula de de la posicion de una nave")
-	            .termsOfServiceUrl("localhost")
+	            .termsOfServiceUrl("https://caracaicedo.github.io/protopitpoBench/swagger.json")
 	            .version("1.0")
 	            .build();
 	}
